@@ -10,7 +10,7 @@
   ];
 
   home.file.".config/nvim" = {
-    source = ./config/nvim/lua;
+    source = ./config/nvim;
     recursive = true;
   };
 }
