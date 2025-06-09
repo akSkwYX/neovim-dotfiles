@@ -2,7 +2,6 @@
 {
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim;
   };
   
   home.packages = with pkgs; [
