@@ -1,23 +1,17 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 {
-  options = {
-    neovim.enable = lib.mkEnableOption "Enable neovim and it's configuration";
+  programs.neovim = {
+    enable = true;
+    package = pkgs.neovim;
   };
+  
+  home.packages = with pkgs; [
+    ripgrep
+    tree-sitter
+  ];
 
-  config = lib.mkIf config.neovim.enable {
-    programs.neovim = {
-      enable = true;
-      package = pkgs.neovim;
-    }
-    
-    home.packages = with pkgs; [
-      ripgrep
-      tree-sitter
-    ];
-
-    home.file.".config/nvim" = {
-      source = ./config/nvim/lua;
-      recursive = true;
-    };
+  home.file.".config/nvim" = {
+    source = ./config/nvim/lua;
+    recursive = true;
   };
 }
