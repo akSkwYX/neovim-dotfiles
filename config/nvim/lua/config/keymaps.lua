@@ -1,4 +1,4 @@
-local kmap = vim.keymaps.set
+local kmap = vim.keymap.set
 -- Seek files
 kmap('n', '<leader>ff', require("telescope.builtin").find_files, {desc = "Find files"})
 -- Live grep
