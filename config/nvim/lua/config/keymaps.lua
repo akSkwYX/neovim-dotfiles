@@ -1,8 +1,10 @@
 local kmap = vim.keymap.set
 -- Seek files
-kmap('n', '<leader>ff', require("telescope.builtin").find_files, {desc = "Find files"})
+kmap({"n", "v", "i"}, '<leader>ff', require("telescope.builtin").find_files, {desc = "Find files"})
 -- Live grep
-kmap('n', '<leader>fg', require("telescope").extensions.egrepify.egrepify, {desc = "Live grep"})
+kmap({"n", "v", "i"}, '<leader>fg', require("telescope").extensions.egrepify.egrepify, {desc = "Live grep"})
+-- Grep in current buffer
+kmap({"n", "v", "i"}, '<leader>fc', ':Telescope current_buffer_fuzzy_find', {desc = "Find in current "})
 -- Show keymaps
 kmap({'n', 'v'},'<leader>?', ':Telescope keymaps<CR>', {desc = "Show keymaps"})
 
