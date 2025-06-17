@@ -10,6 +10,12 @@ return {
          lspconfig.harper_ls.setup {}
          lspconfig.java_language_server.setup {}
          lspconfig.haskell_language_server.setup {}
+
+         vim.diagnostic.config({
+            virtual_text = { severity = { min = vim.diagnostic.INFO }, },
+            underline = { severity = { min = vim.diagnostic.severity.INFO } },
+            signs = { severity = { min = vim.diagnostic.severity.INFO } },
+         })
       end,
    },
 }
