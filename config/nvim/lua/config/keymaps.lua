@@ -4,7 +4,7 @@ kmap({"n", "v", "i"}, '<leader>ff', require("telescope.builtin").find_files, {de
 -- Live grep
 kmap({"n", "v", "i"}, '<leader>fg', require("telescope").extensions.egrepify.egrepify, {desc = "Live grep"})
 -- Grep in current buffer
-kmap({"n", "v", "i"}, '<leader>fc', ':Telescope current_buffer_fuzzy_find', {desc = "Find in current "})
+kmap({"n", "v", "i"}, '<leader>fc', ':Telescope current_buffer_fuzzy_find<CR>', {desc = "Find in current "})
 -- Show keymaps
 kmap({'n', 'v'},'<leader>?', ':Telescope keymaps<CR>', {desc = "Show keymaps"})
 
