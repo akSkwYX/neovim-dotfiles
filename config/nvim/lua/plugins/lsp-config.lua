@@ -5,11 +5,12 @@ return {
          local lspconfig = require 'lspconfig'
 
          vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-         lspconfig.lua_ls.setup ( {} )
-         lspconfig.ocamllsp.setup ( {} )
-         lspconfig.harper_ls.setup ( {} )
-         lspconfig.java_language_server.setup ( {} )
-         lspconfig.hls.setup ( {} )
+
+         vim.lsp.enable("lua_ls")
+         vim.lsp.enable("ocamllsp")
+         vim.lsp.enable("harper_ls")
+         vim.lsp.enable("java_language_server")
+         vim.lsp.enable("hls")
 
          vim.diagnostic.config({
             virtual_text = { severity = { min = vim.diagnostic.INFO }, },
