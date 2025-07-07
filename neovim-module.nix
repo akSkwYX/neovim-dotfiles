@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     ripgrep
     tree-sitter
+    lua54Packages.luarocks
   ];
 
   home.file.".config/nvim" = {
