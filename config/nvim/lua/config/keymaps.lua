@@ -40,8 +40,9 @@ kmap('n', '<C-n>', ':Neotree source=filesystem reveal=true position=left action=
 kmap("n", "<leader>gf", vim.lsp.buf.format, {desc = "Format code"})
 
 -- Translation
-kmap({"n", "x"}, "<leader>tr", require("pantran").motion_translate, {noremap = true, silent = true, expr = true, desc="Motion translate"})
-kmap("n", "<leader>trr", function() return require("pantran").motion_translate() .. "_" end, {noremap = true, silent = true, expr = true, desc="Open translation"})
+kmap({"n", "x"}, "<leader>tre", require("pantran").motion_translate, {noremap = true, silent = true, expr = true, desc="Motion translate"})
+kmap("n", "<leader>trr", function() return require("pantran").motion_translate() .. "_" end, {noremap = true, silent = true, expr = true, desc="Motion translate (line)"})
+kmap("n", "<leader>tr", ":Pantran", {desc = "Open Pantran translation window"})
 
 -- Clipboard manager
 -- Show clipboard history
