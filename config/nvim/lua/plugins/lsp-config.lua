@@ -8,7 +8,7 @@ return {
 
          vim.lsp.enable("lua_ls")
          vim.lsp.enable("ocamllsp")
-         vim.lsp.enable("harper_ls")
+         vim.lsp.enable("clangd")
          vim.lsp.enable("java_language_server")
          vim.lsp.enable("hls")
 
